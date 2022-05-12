@@ -1,0 +1,23 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+  int n;
+  cin>>n;
+
+  int final = 0;
+  for(int i=1; i<=n; i++){
+    string op;
+    cin>>op;
+    if(op == "++X" || op == "X++"){
+      final += 1;
+    }
+    else if(op == "--X" || op == "X--"){
+      final -= 1;
+    }
+  }
+  cout<<final;
+
+  return 0;
+}
