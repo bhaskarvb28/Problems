@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+  int n, k;
+  cin>>n>>k;
+
+  int score[n] = {0};
+  for(int i = 1; i <= n; i++){
+    cin>>score[i];
+  }
+  
+  int min_score = score[k];
+  int participants = 0;
+  
+  for(int j=0; j<=n; j++){
+    if(score[j] >= min_score && score[j] > 0){
+        participants += 1;
+    }
+  }
+  cout<<participants; 
+  return 0;
+}
