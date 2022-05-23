@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+const int N = 0;
+
+int main(){
+  
+  int t;
+  cin >> t;
+  
+  while(t--){
+    int n;
+    cin >> n;
+    
+    string s;
+    cin >> s;
+    
+    int mid = (n-1)/2;
+    int rem = 2;
+    
+    for(int i=0; i<=mid-1; i++){
+      if(s[i] == s[i+1]){
+        rem += 2;
+      }
+      else{
+        rem = 2;
+      }
+    }
+    
+    if(n%2 != 0){
+      cout << rem-1 << endl;
+    }
+    else{
+      cout << rem << endl;
+    }
+  }
+}
+  
